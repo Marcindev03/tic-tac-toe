@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 
 import styles from './Square.module.scss';
@@ -17,15 +18,20 @@ const variants = {
   },
 };
 
-export const Square = ({ value }) => (
-  <motion.button
-    initial="hidden"
-    animate="visible"
-    whileHover="hover"
-    whileTap="tap"
-    variants={variants}
-    className={styles.square}
-  >
-    {value}
-  </motion.button>
-);
+export const Square = ({ value, ...props }) => {
+  // const [value, setValue] = useState(value);
+
+  return (
+    <motion.button
+      initial="hidden"
+      animate="visible"
+      whileHover="hover"
+      whileTap="tap"
+      variants={variants}
+      className={styles.square}
+      {...props}
+    >
+      {value}
+    </motion.button>
+  );
+};
