@@ -1,0 +1,11 @@
+$square-height: 150px;
+$square-width: 150px;
+
+.square {
+  width: $square-height;
+  height: $square-width;
+  background-color: #fff;
+  border-radius: 20%;
+  cursor: pointer;
+  border: none;
+}
