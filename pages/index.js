@@ -1,9 +1,11 @@
+import { Game } from '../components/Game/Game';
+
 const Home = () => {
   return (
     <>
-      <h1>Hello Home</h1>
+      <Game />
     </>
-  )
-}
+  );
+};
 
 export default Home;
